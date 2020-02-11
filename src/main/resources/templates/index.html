@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ショップ管理システム</title>
+    <link href="/css/main.css" th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <h2 class="title">管理画面</h2>
+    <div class="form">
+        <form action="/" method="post">
+            <label>
+                <select name="op">
+                    <option hidden>選択してください</option>
+                    <option value="makerecipe">レシピを作る</option>
+                    <option value="showrecipe">レシピを表示</option>
+                    <option value="makemenu">メニューを作る</option>
+                    <option value="showmenu">メニューを表示</option>
+                    <option value="menustatus">メニューの情報を表示</option>
+                    <option value="showstock">在庫表示</option>
+                    <option value="addstock">在庫を追加</option>
+                    <option value="delstock">在庫を減らす</option>
+                    <option value="buy">買う</option>
+                    <option value="showsales">セールスを見る</option>
+                </select>
+            </label>
+            <label>
+                入力 <input type="text" name="value" class="input">
+            </label>
+            <button type="submit" name="form_submit">入力完了</button>
+        </form>
+    </div>
+
+    <div class="result">
+        <span th:text="${result}"></span>
+    </div>
+
+</div>
+</body>
+</html>

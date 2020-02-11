@@ -1,0 +1,16 @@
+.wrapper {
+    width: 600px;
+    margin: 100px auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.form {
+    margin-left: 20px;
+}
+
+.form label select, .form label .input, .form button {
+    padding: 5px;
+}
